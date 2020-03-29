@@ -22,7 +22,7 @@ TEMP = 0
 HUM = 0
 
 def pub (topic, val):
-     publish.single("orangepipc2/"+topic, val, client_id="OrangPI", hostname="192.168.0.104", auth={'username':"hassio",'password':"LF78RLL4FL9"})
+     publish.single("orangepipc2/"+topic, val, client_id="OrangPI", hostname="%ip%", auth={'username':"%username%",'password':"%password%"})
 
 def readDHT22 ():
     while True:
